@@ -11,17 +11,16 @@ for(var i=0,len=arr.length;i<len;i++){
     }
 }
 var ws=[];
-var i=0; var timer=setInterval(function(){
+var i=203; var timer=setInterval(function(){
     if(i<res.length){
         ws.push(window.open(res[i]));
         console.log("open: "+i+" : "+res[i]);
         i++;
     }
-    if(i>=4){
-        if(i-4>=res.length)clearInterval(timer);
-        ws[i-4].close();
+    if(i>=206){
+        if(i-206>=res.length)clearInterval(timer);
+        ws[i-206].close();
     }
     
-    }, 8000); 
+    }, 9000); 
 
-setInterval(function(){window.alert(i++)},1000)

@@ -31,6 +31,8 @@ var lang=$(".select2-selection__rendered")[0].childNodes[0].textContent;
 obj.fileName=title;
 obj.codeText=res;
 obj.usedLang=lang;
+/*start download to local storage*/
+/*
 var objs=localStorage.leetCodeProblems;
 if(objs==undefined){
     objs=[obj];
@@ -48,5 +50,8 @@ if(i==len){
     localStorage.leetCodeProblems=JSON.stringify(objs);
 }
 }
+*/
+/*end download to local storage */
 //window.alert(JSON.stringify(obj));
-//chrome.runtime.sendMessage(obj);
+chrome.runtime.sendMessage(obj);
+//var uploadPage="http://192.168.43.224:10365/uploadfile.php";

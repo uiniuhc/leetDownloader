@@ -6,13 +6,12 @@
 		"icons": {
 			"16": "icon_16.png",
 			"128": "icon_128.png"
-		},
-        "browser_action":{
-            "default_popup":"popup.html"
-        }
-        ,
+		}
+        ,"permissions": [
+            "http://192.168.43.224:10365/"
+        ],
         "background": {
-            "scripts": ["main.js"]
+            "scripts": ["jquery.js","main.js"]
         },
 		"content_scripts":[{
             "matches":["https://leetcode.com/problems/*"],
