@@ -11,15 +11,15 @@ for(var i=0,len=arr.length;i<len;i++){
     }
 }
 var ws=[];
-var i=203; var timer=setInterval(function(){
+var i=0; var timer=setInterval(function(){
     if(i<res.length){
         ws.push(window.open(res[i]));
         console.log("open: "+i+" : "+res[i]);
         i++;
     }
-    if(i>=206){
-        if(i-206>=res.length)clearInterval(timer);
-        ws[i-206].close();
+    if(i>=2){
+        if(i-2>=res.length)clearInterval(timer);
+        ws[i-2].close();
     }
     
     }, 9000); 
